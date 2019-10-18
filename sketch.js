@@ -1,11 +1,15 @@
-function preload(){
-  // put preload code here
-}
+var capture;
 
 function setup() {
-  // put setup code here
+	createCanvas(windowWidth, windowHeight);
+	capture = createCapture(VIDEO);
+  capture.size(640, 480);
+  capture.hide();
 }
 
 function draw() {
-  // put drawing code here
+	background(200);
+  var myFeed = capture.loadPixels();
+  imageMode(CENTER);
+  image(myFeed, windowWidth/2, windowHeight/2, 640, 480);
 }
