@@ -53,14 +53,17 @@ function setup() {
 }
 
 function intro() {
+  //speech.setVoice("Alice");
   speech.speak("hi, i'm the new siri, let's try the new i phone zs max's selfie camera");
 }
 
 function pic() {
+  //speech.setVoice("Alice");
   speech.speak("click the white circle to take a selfie!");
 }
 
 function cc() {
+  //speech.setVoice("Alice");
   speech.speak("change the parameters of the sliders to create your filter");
 }
 
