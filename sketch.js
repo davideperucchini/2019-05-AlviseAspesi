@@ -29,16 +29,16 @@ function setup() {
   //sliders
   push();
   rSlider = createSlider(0, 255, 0);
-  rSlider.position(windowWidth / 2 - 100, windowHeight / 2 + 300);
+  rSlider.position(windowWidth / 2 - 100, windowHeight / 2 + 250);
   gSlider = createSlider(0, 255, 0);
-  gSlider.position(windowWidth / 2 - 100, windowHeight / 2 + 350);
+  gSlider.position(windowWidth / 2 - 100, windowHeight / 2 + 300);
   bSlider = createSlider(0, 255, 0);
-  bSlider.position(windowWidth / 2 - 100, windowHeight / 2 + 400);
+  bSlider.position(windowWidth / 2 - 100, windowHeight / 2 + 350);
   pop();
 
   //introduction siri button
   button = createButton("hey siri!");
-  button.position(windowWidth / 2 - 50, windowHeight / 5);
+  button.position(windowWidth / 2 - 50, windowHeight / 7);
   button.mousePressed(intro);
 
   //how to take a photo siri
@@ -48,7 +48,7 @@ function setup() {
 
   //change the slider siri
   button = createButton("make your filter");
-  button.position(windowWidth / 2 - 250, windowHeight / 2 + 350);
+  button.position(windowWidth / 2 - 250, windowHeight / 2 + 300);
   button.mousePressed(cc);
 }
 
@@ -97,7 +97,7 @@ function draw() {
   noStroke();
   fill("white");
   textFont(font);
-  text("have fun with the new ifon zs max's camera", windowWidth / 2, windowHeight / 7);
+  text("have fun with the new ifon zs max's camera", windowWidth / 2, windowHeight / 9);
   pop();
 
   //filtro
@@ -128,7 +128,7 @@ function photoButton(_x, _y, _r, _c) {
   this.click = function() {
     var d = dist(mouseX, mouseY, this.x, this.y);
     if (d < this.r) {
-      save("ciao.png");
+      save("selfie.png");
     }
   }
 }
